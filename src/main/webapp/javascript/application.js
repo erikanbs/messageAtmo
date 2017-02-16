@@ -13,6 +13,7 @@ $(function () {
                     logLevel : 'debug',
                     transport : 'websocket' ,
                     trackMessageLength : true,
+                    headers: {'Authentication':'Bearer cc529b46-249c-4c24-8d30-503a668b59f8'},
                     fallbackTransport: 'long-polling'};
 
 
@@ -24,6 +25,7 @@ $(function () {
 
     request.onMessage = function (response) {
         var message = response.responseBody;
+        
         try {
             var json = atmosphere.util.parseJSON(message);
         } catch (e) {

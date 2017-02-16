@@ -1,13 +1,10 @@
 package com.mediadistillery.message.jersey;
 
-import java.util.UUID;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Message {
 	
 	@JsonProperty("sender_id")
-	//private UUID id;
 	private String id;
 	
 	@JsonProperty("push_message")
